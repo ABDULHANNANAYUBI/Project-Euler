@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main()
+{
+
+	int number;
+	int i;
+	int a = 1, b = 1;
+	unsigned long long int c , sum = 0;
+	
+	printf(" Enter Number :");
+	scanf_s(" %d", &number);
+
+	printf(" %d %d", a, b);
+	for (i = 1; i <= number; i++)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		sum = sum + c;
+		printf(" %llu", c);
+
+	}
+	printf("\nTotal : %llu", sum);
+	return 0;
+}
