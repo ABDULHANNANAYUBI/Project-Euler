@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+#include<sstream>
+using namespace std;
+
+int main() {
+	// Writing the Gray code function
+	// Changing the Binary code to the Gray code.....
+	string get, out;
+	cout << "Enter Binary code : ";
+	getline(cin, get);
+	out.push_back(get[0]);
+	for (int i = 1; i < get.length() - 1; i++) {
+		if (get[i] == get[i + 1])
+			out.push_back('0');
+		else
+			out.push_back('1');
+	}
+	cout << endl << out << endl;
+
+	return 0;
+}
